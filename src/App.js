@@ -1,13 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'react-bootstrap';
+
+
+import 'bootstrap/dist/css/bootstrap.rtl.min.css';
+
+import Header from './components/Header';
+import FooterPage from './components/FooterPage';
 
 function App() {
   return (
-    <div>
-      <h1>Hello world</h1>
-      <Button>Button</Button>
+    <div style={{direction: "rtl"}}>
+     <Header />
+     <main className='py-3'></main>
+     <FooterPage/>
     </div>
   );
 }
