@@ -6,19 +6,19 @@ import {
   Nav,
   NavDropdown,
   Form,
-  FormControl,
   Button,
   Row,
   Col,
 } from 'react-bootstrap';
 import { ReactComponent as Logo } from '../images/logo.svg';
 import { ReactComponent as Logo2 } from '../images/youtubeLogo.svg';
-import { ReactComponent as Logo3 } from '../images/instagram.svg';
+import { ReactComponent as Logo3 } from '../images/instagram2.svg';
+import { ReactComponent as Logo4 } from '../images/facebook.svg';
 import './header.css';
 
 const Header = () => {
   return (
-    <Navbar fixed='top' bg='light' collapseOnSelect expand='md' variant='light'>
+    <Navbar fixed='top'  bg='light' collapseOnSelect expand='md' variant='light'>
       <Container>
         <Navbar.Brand href='/'>
           <Logo
@@ -49,13 +49,6 @@ const Header = () => {
 
         <Form>
           <Row className='justify-content-center'>
-            {/* <Col xs={6} md={8}>
-                <FormControl
-                  type='text'
-                  placeholder='חיפוש...'
-                  className='mr-sm-2'
-                ></FormControl>
-              </Col> */}
             <Col xs={12} md={4}>
               <Button variant='outline-light'>
                 <Navbar.Brand href='https://www.youtube.com/channel/UCUPOpW24O1HrmWGjQQgBOKg'>
@@ -66,10 +59,20 @@ const Header = () => {
                 </Navbar.Brand>
               </Button>
             </Col>
-            <Col xs={12} md={4}>
+            <Col xs={9} md={4}>
               <Button variant='outline-light'>
                 <Navbar.Brand href='https://www.instagram.com/ormusicevents/'>
                   <Logo3
+                    alt=''
+                    style={{ maxWidth: '8rem', maxHeight: '2rem' }}
+                  />
+                </Navbar.Brand>
+              </Button>
+            </Col>
+            <Col xs={12} md={4}>
+              <Button variant='outline-light'>
+                <Navbar.Brand href='https://www.facebook.com/ormusicevents-101538131232154'>
+                  <Logo4
                     alt=''
                     style={{ maxWidth: '8rem', maxHeight: '2rem' }}
                   />
