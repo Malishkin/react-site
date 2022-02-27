@@ -50,7 +50,7 @@ const Header = () => {
               <Nav.Link href='/contacts'>צרו קשר</Nav.Link>
             </Nav>
           </Navbar.Collapse>
-          <Form>
+          {/* <Form>
             <Row className='justify-content-center'>
               <Col xs={6} md={8}>
                 <FormControl
@@ -63,7 +63,7 @@ const Header = () => {
                 <Button variant='outline-info'>חיפוש</Button>
               </Col>
             </Row>
-          </Form>
+          </Form> */}
         </Container>
       </Navbar>
      
