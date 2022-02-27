@@ -13,6 +13,7 @@ function App() {
   return (
     <div style={{direction: "rtl"}}>
      <Header />
+     
      <main className='py-3'>
      <Router>
         <Routes>
@@ -25,6 +26,7 @@ function App() {
         </Routes>
       </Router>
      </main>
+     
      <FooterPage/>
     </div>
   );
