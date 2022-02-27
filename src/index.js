@@ -6,7 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from "react-bootstrap";
 
 
+
 ReactDOM.render(
+
   <ThemeProvider dir="rtl">
     <App />
   </ThemeProvider>,

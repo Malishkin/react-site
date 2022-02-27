@@ -67,7 +67,7 @@ const HomePage = () => {
           <iframe
             width='560'
             height='315'
-            src='https://www.youtube.com/embed/rw0xl86uiJY'
+            src='https://www.youtube.com/embed/VbgCM_ffpNE'
             title='YouTube video player'
             frameBorder='0'
             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
@@ -76,7 +76,7 @@ const HomePage = () => {
           <iframe
             width='560'
             height='315'
-            src='https://www.youtube.com/embed/-M0jUXmxQa4'
+            src='https://www.youtube.com/embed/BgfaWaQcY0Q'
             title='YouTube video player'
             frameBorder='0'
             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
@@ -85,7 +85,7 @@ const HomePage = () => {
           <iframe
             width='560'
             height='315'
-            src='https://www.youtube.com/embed/C0EM0JLHfk8'
+            src='https://www.youtube.com/embed/wrR5Gat_1Yc'
             title='YouTube video player'
             frameBorder='0'
             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
