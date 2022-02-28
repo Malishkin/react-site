@@ -18,7 +18,7 @@ import './header.css';
 
 const Header = () => {
   return (
-    <Navbar fixed='top'  bg='light' collapseOnSelect expand='md' variant='light'>
+    <Navbar fixed='top' bg='light' collapseOnSelect expand='md' variant='light'>
       <Container>
         <Navbar.Brand href='/'>
           <Logo
@@ -44,43 +44,40 @@ const Header = () => {
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href='/contacts'>צרו קשר</Nav.Link>
+            <Row className='justify-content-center'>
+              <Col xs={12} md={4}>
+                <Button variant='outline-light'>
+                  <Navbar.Brand href='https://www.youtube.com/channel/UCUPOpW24O1HrmWGjQQgBOKg'>
+                    <Logo2
+                      alt=''
+                      style={{ maxWidth: '8rem', maxHeight: '2rem' }}
+                    />
+                  </Navbar.Brand>
+                </Button>
+              </Col>
+              <Col xs={12} md={4}>
+                <Button variant='outline-light'>
+                  <Navbar.Brand href='https://www.facebook.com/ormusicevents-101538131232154'>
+                    <Logo4
+                      alt=''
+                      style={{ maxWidth: '8rem', maxHeight: '2rem' }}
+                    />
+                  </Navbar.Brand>
+                </Button>
+              </Col>
+              <Col xs={9} md={4}>
+                <Button variant='outline-light'>
+                  <Navbar.Brand href='https://www.instagram.com/ormusicevents/'>
+                    <Logo3
+                      alt=''
+                      style={{ maxWidth: '8rem', maxHeight: '2rem' }}
+                    />
+                  </Navbar.Brand>
+                </Button>
+              </Col>
+            </Row>
           </Nav>
         </Navbar.Collapse>
-
-        <Form>
-          <Row className='justify-content-center'>
-            <Col xs={12} md={4}>
-              <Button variant='outline-light'>
-                <Navbar.Brand href='https://www.youtube.com/channel/UCUPOpW24O1HrmWGjQQgBOKg'>
-                  <Logo2
-                    alt=''
-                    style={{ maxWidth: '8rem', maxHeight: '2rem' }}
-                  />
-                </Navbar.Brand>
-              </Button>
-            </Col>
-            <Col xs={9} md={4}>
-              <Button variant='outline-light'>
-                <Navbar.Brand href='https://www.instagram.com/ormusicevents/'>
-                  <Logo3
-                    alt=''
-                    style={{ maxWidth: '8rem', maxHeight: '2rem' }}
-                  />
-                </Navbar.Brand>
-              </Button>
-            </Col>
-            <Col xs={12} md={4}>
-              <Button variant='outline-light'>
-                <Navbar.Brand href='https://www.facebook.com/ormusicevents-101538131232154'>
-                  <Logo4
-                    alt=''
-                    style={{ maxWidth: '8rem', maxHeight: '2rem' }}
-                  />
-                </Navbar.Brand>
-              </Button>
-            </Col>
-          </Row>
-        </Form>
       </Container>
     </Navbar>
   );
