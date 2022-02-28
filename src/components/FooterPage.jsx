@@ -1,19 +1,19 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Card, Container, Form, Button } from 'react-bootstrap';
 import './footerPage.css';
 import dFooter from '../images/ensembles/night_projector.JPG';
 import emailjs from 'emailjs-com';
 
 const FooterPage = () => {
-  const form = useRef();
+  
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
         'service_8kwhoue',
-        'template_8vvwfcr',
-        form.current,
+        'template_glbztjl',
+        e.target,
         'BioP74l98LPuiWn_9'
       )
       .then(
@@ -46,7 +46,7 @@ const FooterPage = () => {
         <Container>
           <Card.Title style={textStyle}>השאירו פרטים ונחזור אליכם:</Card.Title>
           <Form
-            ref={form}
+           
             onSubmit={sendEmail}
             className='justify-content-center'
             xs={8}
@@ -57,15 +57,23 @@ const FooterPage = () => {
               <Form.Control
                 type='text'
                 placeholder='השם המלא'
-                name='user_name'
+                name="name"
               />
             </Form.Group>
             <Form.Group controlId='formBasicEmail'>
               <Form.Label>אימייל:</Form.Label>
               <Form.Control
                 type='email'
-                name='user_email'
+                name='email'
                 placeholder='Enter email'
+              />
+            </Form.Group>
+            <Form.Group controlId='formBasicEmail'>
+              <Form.Label>נושא:</Form.Label>
+              <Form.Control
+                type='text'
+                name='subject'
+                placeholder='נושא'
               />
             </Form.Group>
 
@@ -73,14 +81,12 @@ const FooterPage = () => {
               <Form.Label>הקלדת טקסט:</Form.Label>
               <Form.Control
                 as='textarea'
-                rows='1'
+                rows='2'
                 name='message'
                 placeholder='טקסט חופשי...'
               />
             </Form.Group>
-            {/* <Form.Group controlId='formBasicCheckbox'>
-          <Form.Check type='checkbox' label="Check me out"/>
-        </Form.Group> */}
+        
             <Button variant='outline-light' type='submit' className='mt-2'>
               שלח
             </Button>
