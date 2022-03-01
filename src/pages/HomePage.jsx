@@ -58,12 +58,8 @@ const HomePage = () => {
       </Card>
 
       <Container className='mt-4' style={{ marginBottom: '20%' }}>
-        <Button onClick={clicked}>סרטי ווידאו</Button>
-        <Row className='mt-2' xs={1} md={1} lg={3}>
-          {resultyt && resultyt.map((link, i)=>{
-              console.log("link ", link)
-          })}
-        </Row>
+        {/* <Button onClick={clicked}>סרטי ווידאו</Button> */}
+      
 
         <Row className='mt-2' xs={1} md={1} lg={3}>
           <iframe

@@ -5,7 +5,6 @@ import dFooter from '../images/ensembles/night_projector.JPG';
 import emailjs from 'emailjs-com';
 
 const FooterPage = () => {
-  
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -18,18 +17,18 @@ const FooterPage = () => {
       )
       .then(
         (result) => {
+          alert('נתונים נשלחו בהצלחה');
           console.log(result.text);
         },
         (error) => {
+          alert('שגיאה בשליחת נתונים');
           console.log(error.text);
         }
-        
       );
-      e.target.reset();
+    e.target.reset();
   };
 
   var textStyle = {
-    
     direction: 'rtl',
   };
   var imageStyle = {
@@ -46,7 +45,6 @@ const FooterPage = () => {
         <Container>
           <Card.Title style={textStyle}>השאירו פרטים ונחזור אליכם:</Card.Title>
           <Form
-           
             onSubmit={sendEmail}
             className='justify-content-center'
             xs={8}
@@ -54,11 +52,7 @@ const FooterPage = () => {
           >
             <Form.Group controlId='formBasicPhone'>
               <Form.Label>שם:</Form.Label>
-              <Form.Control
-                type='text'
-                placeholder='השם המלא'
-                name="name"
-              />
+              <Form.Control type='text' placeholder='השם המלא' name='name' />
             </Form.Group>
             <Form.Group controlId='formBasicEmail'>
               <Form.Label>אימייל:</Form.Label>
@@ -70,11 +64,7 @@ const FooterPage = () => {
             </Form.Group>
             <Form.Group controlId='formBasicEmail'>
               <Form.Label>נושא:</Form.Label>
-              <Form.Control
-                type='text'
-                name='subject'
-                placeholder='נושא'
-              />
+              <Form.Control type='text' name='subject' placeholder='נושא' />
             </Form.Group>
 
             <Form.Group controlId='formBasicPassword'>
@@ -86,7 +76,7 @@ const FooterPage = () => {
                 placeholder='טקסט חופשי...'
               />
             </Form.Group>
-        
+
             <Button variant='outline-light' type='submit' className='mt-2'>
               שלח
             </Button>
