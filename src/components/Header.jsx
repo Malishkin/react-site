@@ -43,7 +43,7 @@ const Header = () => {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href='/contacts'>צרו קשר</Nav.Link>
+            
             <Row className='justify-content-center'>
               <Col xs={12} md={4}>
                 <Button variant='outline-light'>

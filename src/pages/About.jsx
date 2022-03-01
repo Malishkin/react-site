@@ -1,47 +1,56 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
-import dEnsemble from '../images/ensembles/kazino.JPG';
+import { Card, Container, Row, Col } from 'react-bootstrap';
+import dBim from '../images/ensembles/noPeople.JPG';
+import dShay from '../images/shay1.jpeg';
+import dSveta from '../images/ensembles/sveta_ura1.JPG'
+import dRefael from '../images/ensembles/refael3.jpg'
 
 const About = () => {
   var textStyle = {
-    marginTop: '20%',
-    
+    marginTop: '5%',
+
     direction: 'rtl',
   };
-  var imageStyle ={
-    height: '1062px',
+  var imageStyle = {
+    height: '300px',
     width: '100%',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
+  };
+  var portraitStyle ={
+    height: '350px',
+    width: '350px',
   }
   return (
-    <Card className='bg-dark text-white'>
-      <Card.Img
-        style={imageStyle}
-        responsive
-        src={dEnsemble}
-        alt='Ensemble'
-      />
-      <Card.ImgOverlay>
-        <Card.Title style={textStyle}>קצת עלינו</Card.Title>
-        <Card.Text>
-          לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית קולהע צופעט למרקוח
-          איבן איף, ברומץ כלרשט מיחוצים. קלאצי סחטיר בלובק. תצטנפל בלינדו למרקל
-          אס לכימפו, דול, צוט ומעיוט - לפתיעם ברשג - ולתיעם גדדיש. קוויז דומור
-          ליאמום בלינך רוגצה. לפמעט קולורס מונפרד אדנדום סילקוף, מרגשי ומרגשח.
-          עמחליף ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסתעד
-          לכנו סתשם השמה - לתכי מורגם בורק? לתיג ישבעס.
-        </Card.Text>
-        <Card.Text>
-          לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית קולהע צופעט למרקוח
-          איבן איף, ברומץ כלרשט מיחוצים. קלאצי סחטיר בלובק. תצטנפל בלינדו למרקל
-          אס לכימפו, דול, צוט ומעיוט - לפתיעם ברשג - ולתיעם גדדיש. קוויז דומור
-          ליאמום בלינך רוגצה. לפמעט קולורס מונפרד אדנדום סילקוף, מרגשי ומרגשח.
-          עמחליף ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסתעד
-          לכנו סתשם השמה - לתכי מורגם בורק? לתיג ישבעס.
-        </Card.Text>
-      </Card.ImgOverlay>
-    </Card>
+    <>
+      <Card className='bg-dark text-white'>
+        <Card.Img style={imageStyle} responsive src={dBim} alt='Ensemble' />
+        <Card.ImgOverlay>
+          <Card.Title style={textStyle}>קצת עלינו</Card.Title>
+          <Card.Text>
+            קודם כל, איזה כיף לנו שהחלטתם לקרוא עלינו, ואם כבר אתם כאן אז תתנו
+            לנו כמה רגעים לספר לכם מי אנחנו ולמה כדאי לכם להיפגש איתנו?
+          </Card.Text>
+        </Card.ImgOverlay>
+      </Card>
+      <Container className='mt-4' style={{ marginBottom: '20%' }}>
+       
+
+       <Row className='mt-2' xs={1} md={2} lg={3}>
+         <Col  className='mt-2 pb-3'>
+        <img src={dShay} alt='Shay' style={portraitStyle} />
+        </Col>
+        <Col  className='mt-2 pb-3'>
+        <img src={dSveta} alt='Sveta' style={portraitStyle} />
+        </Col>
+        <Col  className='mt-2'>
+        <img src={dRefael} alt='Sveta' style={portraitStyle} />
+        </Col>
+       </Row>
+      
+       
+     </Container>
+    </>
   );
 };
 

@@ -5,7 +5,7 @@ import './App.css'
 import Header from './components/Header';
 import FooterPage from './components/FooterPage';
 import HomePage from './pages/HomePage';
-import Contacts from './pages/Contacts';
+
 import Ensembles from './pages/Ensembles';
 import About from './pages/About';
 
@@ -19,7 +19,7 @@ function App() {
         <Routes>
           
           <Route path='/' element={<HomePage/>}/>
-          <Route path='/contacts' element={<Contacts/>}/>
+          
           <Route path='/ensembles' element={<Ensembles/>}/>
           <Route path='/about' element={<About/>}/>
          

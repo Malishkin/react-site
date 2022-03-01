@@ -2,6 +2,9 @@ import React from 'react';
 import { Card, Container, Form, Button } from 'react-bootstrap';
 import './footerPage.css';
 import dFooter from '../images/ensembles/night_projector.JPG';
+import dWhatsapp from '../images/whatsapp.png';
+import dPhone from '../images/phone.png'
+
 import emailjs from 'emailjs-com';
 
 const FooterPage = () => {
@@ -33,7 +36,7 @@ const FooterPage = () => {
   };
   var imageStyle = {
     marginBottom: '0px',
-    height: '400px',
+    height: '600px',
     width: '100%',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
@@ -42,42 +45,87 @@ const FooterPage = () => {
     <Card className='bg-dark text-white'>
       <Card.Img style={imageStyle} responsive src={dFooter} alt='Ensemble' />
       <Card.ImgOverlay>
-        <Container>
-          <Card.Title style={textStyle}>השאירו פרטים ונחזור אליכם:</Card.Title>
-          <Form
+        <Container  style={{width: "50%"}}>
+        <Card.Title style={textStyle}>צרו קשר איתנו:</Card.Title>
+        <Button variant='outline-light'  className='mt-2 mb-2'>
+        <img src={dWhatsapp}  alt=''
+            
+            style={{ maxWidth: '8rem', maxHeight: '2rem',  borderRadius: "25%" }}/>
+
+            
+              
+             
+            </Button>
+            <Button variant='outline-light'  className='mt-2 mb-2' style={{marginRight: "1rem"}}>
+        <img src={dPhone}  alt=''
+            
+            style={{ maxWidth: '8rem', maxHeight: '2rem',  borderRadius: "25%" }}/>
+
+         
+              
+             
+            </Button>
+          <Card.Title style={textStyle}>או השאירו פרטים ונחזור אליכם:</Card.Title>
+          <Form 
             onSubmit={sendEmail}
             className='justify-content-center'
+            
             xs={8}
             md={8}
           >
-            <Form.Group controlId='formBasicPhone'>
-              <Form.Label>שם:</Form.Label>
-              <Form.Control type='text' placeholder='השם המלא' name='name' />
+            <Form.Group controlId='formBasicName'>
+              <Form.Label> שם: <i class="fa fa-asterisk" aria-hidden="true"></i></Form.Label>
+              <Form.Control
+                type='text'
+                placeholder='הקלדת שם'
+                name='name'
+                required
+              />
             </Form.Group>
             <Form.Group controlId='formBasicEmail'>
-              <Form.Label>אימייל:</Form.Label>
+              <Form.Label>אימייל: <i class="fa fa-asterisk" aria-hidden="true"></i></Form.Label>
+
               <Form.Control
                 type='email'
                 name='email'
-                placeholder='Enter email'
+                placeholder='הקלדת אימייל'
+                required
+              />
+              
+            </Form.Group>
+            <Form.Group controlId='formBasicPhone'>
+              <Form.Label>מספר הטלפון:</Form.Label>
+
+              <Form.Control
+                type='phone'
+                name='phone'
+                placeholder='מספר הטלפון'
+                
+              />
+              
+            </Form.Group>
+            <Form.Group controlId='formBasicText'>
+              <Form.Label>באיזה הרכב מעוניינים: <i class="fa fa-asterisk" aria-hidden="true"></i></Form.Label>
+              <Form.Control
+                type='text'
+                name='subject'
+                placeholder='הרכב או Dj'
+                required
               />
             </Form.Group>
-            <Form.Group controlId='formBasicEmail'>
-              <Form.Label>נושא:</Form.Label>
-              <Form.Control type='text' name='subject' placeholder='נושא' />
-            </Form.Group>
 
-            <Form.Group controlId='formBasicPassword'>
-              <Form.Label>הקלדת טקסט:</Form.Label>
+            <Form.Group controlId='formBasicText'>
+              <Form.Label>הערות:</Form.Label>
               <Form.Control
                 as='textarea'
-                rows='2'
+                
                 name='message'
                 placeholder='טקסט חופשי...'
+                
               />
             </Form.Group>
 
-            <Button variant='outline-light' type='submit' className='mt-2'>
+            <Button  variant='outline-light' type='submit' className='mt-2'>
               שלח
             </Button>
           </Form>
